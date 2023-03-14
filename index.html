@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="overlayscrollbars.min.css">
+  <script src="overlayscrollbars.browser.es6.min.js"></script>
+  <title>Document</title>
+  <style>
+    .content {
+      overflow: auto;
+      max-height: 100px;
+      width: 300px;
+      padding-right: 10px;
+    }
+
+    .os-theme-custom {
+      --os-size: 10px;
+      --os-handle-bg: rgb(128, 128, 128);
+      --os-handle-bg-hover: red;
+      --os-handle-bg-active: rgb(255, 208, 0);
+      --os-handle-border-radius: 10px;
+      --os-handle-perpendicular-size: 3px;
+      --os-handle-perpendicular-size-hover: 8px;
+      --os-handle-perpendicular-size-active: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content custom-scroll">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nisi tenetur quaerat, enim hic obcaecati, vero explicabo nobis in quam vitae nostrum at blanditiis! Tenetur explicabo ipsa voluptates voluptas reiciendis similique exercitationem amet inventore aliquam iure dignissimos eum odio optio eos saepe quo commodi, quia quisquam! Voluptates nobis velit ad sed harum pariatur incidunt autem, ipsa voluptatibus accusantium! Corporis, autem? Iusto, eum nobis dolorum quidem odit ipsum, veritatis quasi voluptates, molestias ad pariatur doloremque iste! Minima velit quidem cupiditate non cum nulla laboriosam eius veniam. Veniam quas velit itaque animi laudantium molestiae! Ut adipisci repellat porro delectus amet doloremque maiores?
+  </div>
+
+  <script>
+    var {
+      OverlayScrollbars,
+      ScrollbarsHidingPlugin,
+      SizeObserverPlugin,
+      ClickScrollPlugin
+    } = OverlayScrollbarsGlobal;
+
+    // simple initialization with an element
+    const osInstance = OverlayScrollbars(document.querySelector('.custom-scroll'), {
+      scrollbars: {
+        theme: 'os-theme-custom'
+      }
+    });
+  </script>
+</body>
+
+</html>
